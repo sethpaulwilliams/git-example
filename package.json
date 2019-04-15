@@ -1,0 +1,27 @@
+{
+  "name": "git-example",
+  "version": "1.0.0",
+  "description": "This is a paragraph",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/browser-sync  start --server --files='**/*'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethpaulwilliams/git-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sethpaulwilliams/git-example/issues"
+  },
+  "homepage": "https://github.com/sethpaulwilliams/git-example#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}
