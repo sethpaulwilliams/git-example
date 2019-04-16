@@ -1,0 +1,32 @@
+/* THIS IS A COMMENT */ 
+
+body {
+background: green;
+}
+
+/* selects all elements with class="definition" */
+.definition {
+    font-weight: bold;
+    background-color: yellow;
+}
+
+/* selects the element with id="cat-definition" */
+#cat-definition {
+    font-size: 2em
+}
+
+/* changes all stand-alone <p> elements */
+p {
+color: darkmagenta;
+}
+
+/* selects only the elements within header section */
+header {
+    color: aqua;
+}
+
+/* selects the elements with class="source-link" */
+.source-link {
+    color: white;
+    font-size: 1em
+}
