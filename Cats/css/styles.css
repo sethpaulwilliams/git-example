@@ -17,7 +17,7 @@ background: green;
 
 /* changes all stand-alone <p> elements */
 p {
-color: darkmagenta;
+color: rgb(228, 22, 22);
 }
 
 /* selects only the elements within header section */
@@ -46,4 +46,55 @@ h1, h2, h3 {
      background-color: chocolate
  }
 
- 
+ /* setting the font family for the whole body section */
+ body {
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+ }
+
+ /* using a special font from Google Fonts for the title - insert link into html doc first */
+header {
+    font-family: 'Dokdo', cursive;
+}
+
+/* setting background color of the list paragraph to pure blue + half transparent using rgb */
+.list {
+    background-color: rgb(0,0,255,0.5);
+}
+
+/* adding background image to two of the paragraph sections in middle */
+.background {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/* .. here specifies that the images folder is within the parent folder */
+
+/* Adjusting the width of paragraph id="p1" */
+#p1 {
+    width: 100px;
+}
+
+/* Adjusting the height of paragrpah id="p2" */
+#p2 {
+    height: 100px;
+}
+
+/* Adding a border color, width, and style to paragraph id="p3" */
+#p3 {
+    border-color: rgb(0,0,100);
+    border-width: 5px;
+    border-style: double;
+}
+
+/* Adjusting the maximum width and moving id="p4" over using margin arrangements */
+#p4 {
+    max-width: 1170px;
+    margin-left: 300px;
+}
+
+/* Centering the text of id="p5" within its max width. Notice that it remains in its position as my screen size grows an shrinks */
+#p5 {
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
