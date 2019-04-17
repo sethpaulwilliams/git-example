@@ -30,3 +30,20 @@ header {
     color: white;
     font-size: 1em
 }
+
+/* selects all h1, h2, and h3 elements */
+h1, h2, h3 {
+    font-weight: 900;
+}
+
+/* selects all elements with class="nav-link" that are being hovered over with mouse */
+.nav-link:hover {
+    color: azure
+}
+
+/* selects all <input> elements that have keyboard focus */
+ input:focus {
+     background-color: chocolate
+ }
+
+ 
