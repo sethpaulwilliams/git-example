@@ -95,45 +95,69 @@ footer {
 }
 
 
-#p1 img {
-    max-width: 200px;
-}
-
-#p2 img {
-    max-width: 200px;
-}
 
 /* the following demonstrates use of flexbox */
-#p1 {
+.group1 {
     display: flex;
-    flex-direction: row;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: stretch;
-    height: 300px;
-}
-
-#p2 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    align-items: baseline;
-    align-content: center;
+    flex-flow: column wrap;
 }
 
 .item1 {
-    
+    justify-content: flex-end;
+    color: red;
+    padding: 2rem;
+    width: 100px;
+    height: auto;
 }
 
-.item2 {
-    width: 100px;
-    height: 100px;
-    margin: auto;
+.item2 img{
+    align-items: flex-start;
+    max-width: 300px;
+    max-height: 300px;
+    padding: 2rem;
 }
+
+.group2 {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+}
+
+.item3 {
+    justify-content: flex-end;
+    color: red;
+    padding: 2rem;
+    width: 100px;
+    height: auto;
+}
+
+.item4 img {
+    align-items: flex-start;
+    max-width: 300px;
+    max-height: 300px;
+    padding: 2rem;
+}
+
+@media all and (min-width: 800px) {
+    .item3    { flex: 3 0px; }
+    .item1 { order: 1; } 
+    .item3    { order: 2; }
+    .item2 img { order: 3; }
+    .item4 img  { order: 4; }
+
+
+
+
+
+
+
 
 /* flexbox examples - example 1
 .flex-container {
