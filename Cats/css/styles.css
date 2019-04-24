@@ -5,18 +5,20 @@ html {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
     position: relative;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 15px;
+    align-content: center;
 }
 
 main {
     background-color: black;
     font-size: 20px;
-    padding: 1rem;
     color: rgb(230,255,255);
+    padding: 1rem;
 }
+
+
 
 header {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -29,7 +31,6 @@ header {
 
 h1 {
     text-align: center;
-    background-color: 
 }
 
 nav img {
@@ -61,13 +62,38 @@ div.center {
 color: green;
 }
 
-
-
-
-main img {
-    max-width: 300px;
-    height: auto;
+.define dt, dd {
+    color: black;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    background-color: rgb(153, 148, 148);
 }
+
+
+.kittens {
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.kittens img {
+    max-height: 300px;
+    transform: rotate(90deg);
+    float: right;
+    margin-top: -1rem;
+    margin-bottom: 3rem;
+}
+
+#p5 {
+    max-width: 300px;
+    max-height: auto;
+}
+
+footer {
+    background-color: rgb(0,50,50);
+    padding: 1rem;
+}
+
 
 /* rules applying only to screens 500 pixels and wider */
 @media (min-width: 500px) {
