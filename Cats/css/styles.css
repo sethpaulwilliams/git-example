@@ -95,6 +95,26 @@ footer {
 }
 
 
+/* the following two paragraphs demonstrate use of flexbox */
+#p1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
+
+#p2 {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    flex-flow: column-reverse wrap;
+    justify-content: flex-end;
+}
+
+
+
+
 /* rules applying only to screens 500 pixels and wider */
 @media (min-width: 500px) {
     body {
