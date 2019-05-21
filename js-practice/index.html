@@ -107,6 +107,19 @@
             <input type="text" aria-label="Last name" class="form-control">
     </div>
 
+    <table class="table table-stripped table-hover people" width="100%">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col" class="numeric">Age</th>
+          <th scope="col">Email</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
 
 
     <!-- Optional JavaScript -->
@@ -115,5 +128,81 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="app.js"></script>
+  
+    <!-- Adding new content via JavaScript -->
+    <script src="people.js"></script>
+  
+  <script>
+    var newPara = document.createElement("p");
+      newPara.textContent = "Life is the turtle egg buried in the sand."
+
+      var body = document.querySelector("body");
+      body.appendChild(newPara);
+
+// Adding table
+      function renderTableCell(value, isNumeric) {
+      var td = document.createElement("td");
+      
+      td.textContent = value;
+
+      if (isNumeric) {
+        td.classList.add("numeric");
+      }
+
+      return td;
+
+      console.log(td);
+      }
+
+      function renderPersonRow(person) {
+        var tr = document.createElement("tr");
+
+        // THE LONG WAY:
+      // var cell = renderTableCell(person.fname, false);
+      // var cell2 = renderTableCell(person.lname, false);
+      // var cell3 = renderTableCell(person.age, true); 
+      // var cell4 = renderTableCell(person.email, false); 
+      // var cell5 = renderTableCell(person.description, false); 
+
+      // tr.appendChild(cell);
+      // tr.appendChild(cell2);
+      // tr.appendChild(cell3);
+      // tr.appendChild(cell4);
+      // tr.appendChild(cell5);
+
+        // THE SHORT WAY
+      tr.appendChild(renderTableCell(person.fname, false));
+      tr.appendChild(renderTableCell(person.lname, false));
+      tr.appendChild(renderTableCell(person.age, true));
+      tr.appendChild(renderTableCell(person.email, false));
+      tr.appendChild(renderTableCell(person.description, false));  
+
+      return tr;
+      }
+
+      function renderPeopleTable (peopleArray) {
+        var tbody = document.querySelector("table.people tbody");
+
+        tbody.textContent = "";
+
+        peopleArray.forEach(function(person) {
+          tbody.appendChild(renderPersonRow(person));
+        });
+      };
+
+      renderPeopleTable(people);
+
+      
+      console.log(row);
+      
+      
+      console.log(tbody);
+
+      
+
+      
+
+      
+  </script>
   </body>
 </html>
