@@ -13,6 +13,12 @@
 </head>
 
 <style>
+table {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  
+}
+
 
     
 </style>
@@ -192,14 +198,53 @@
 
       renderPeopleTable(people);
 
-      
-      console.log(row);
-      
-      
-      console.log(tbody);
 
-      
 
+      // Sort people by age
+      people.sort(function(p1, p2) {
+        return p1.age - p2.age;
+      });
+
+   
+
+      // filter by those under 30
+      var underThirty = people.filter(function(p) {
+        return (p.age < 30);
+      });
+
+      console.log(underThirty);
+      console.log(people);
+
+
+      // Iterating using the .forEach technique
+      people.forEach(function(p) {
+        console.log(p.fname);
+      })  
+
+
+      // Mapping 
+      var ages = people.map(function(p) {
+        return p.age;
+      });
+      console.log(ages);
+
+
+      // Joining - put first names in one string
+      var names = people.map(function(p) {
+        return p.fname;
+      });
+      console.log(names.join(", "));
+
+
+      // Combining all of the above to get alphabetically-sorted list of names of those 30 and over
+      function overThirty(p) {return (p.age >= 30); }
+      function justName(p) {return p.fname; }
+      var names = people.filter(overThirty)
+          .map(justName)
+          .sort()
+          .join(", ");
+
+      console.log(names);
       
 
       
