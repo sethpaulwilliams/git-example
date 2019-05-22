@@ -146,19 +146,19 @@ table {
       body.appendChild(newPara);
 
 // Adding table
-      function renderTableCell(value, isNumeric) {
-      var td = document.createElement("td");
-      
-      td.textContent = value;
 
-      if (isNumeric) {
-        td.classList.add("numeric");
-      }
+function renderPeopleTable (peopleArray) {
+        var tbody = document.querySelector("table.people tbody");
 
-      return td;
+        tbody.textContent = "";
 
-      console.log(td);
-      }
+        peopleArray.forEach(function(person) {
+          tbody.appendChild(renderPersonRow(person));
+        });
+      };
+
+      renderPeopleTable(people);
+
 
       function renderPersonRow(person) {
         var tr = document.createElement("tr");
@@ -184,19 +184,26 @@ table {
       tr.appendChild(renderTableCell(person.description, false));  
 
       return tr;
-      }
-
-      function renderPeopleTable (peopleArray) {
-        var tbody = document.querySelector("table.people tbody");
-
-        tbody.textContent = "";
-
-        peopleArray.forEach(function(person) {
-          tbody.appendChild(renderPersonRow(person));
-        });
       };
 
-      renderPeopleTable(people);
+
+      function renderTableCell(value, isNumeric) {
+      var td = document.createElement("td");
+      
+      td.textContent = value;
+
+      if (isNumeric) {
+        td.classList.add("numeric");
+      }
+
+      return td;
+
+      console.log(td);
+      };
+
+      
+
+      
 
 
 
@@ -243,7 +250,6 @@ table {
           .map(justName)
           .sort()
           .join(", ");
-
       console.log(names);
       
 
